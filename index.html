@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classical Music</title>
+    <style>
+      body {
+        background: blue;
+      }
+      main {
+        color: lightblue;
+        text-align: center;
+      }
+      footer {
+        color: lightblue;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Classical Music</h1>
+
+      <ul>
+        <li>what is your favorite composer</li>
+        <li>what is your favorite piece from that composer</li>
+        <li>how hard is that piece</li>
+        <li>can you play the piece</li>
+      </ul>
+    </main>
+    <footer>
+      <script type="text/javascript">
+        let difficulty;
+        function getComposer() {
+          Composer = prompt("who is your favorite composer");
+
+          if (Composer) {
+            console.log(Composer + " thats a great composer ");
+          }
+        }
+        getComposer();
+        function getPiece() {
+          Piece = prompt("what is your favorite piece by them");
+
+          if (Piece) {
+            console.log(Piece + " I love that piece ");
+          }
+        }
+        getPiece();
+
+        function getDifficulty() {
+          difficulty = prompt("how hard is the piece 1-10");
+          let output = "difficulty rating";
+
+          for (let i = 0; i < difficulty; i++) {
+            output =
+              output +
+              "<img src='./treble-clef.png' class = 'treble-clef' width = 25px height = 25px />";
+          }
+        }
+        getDifficulty();
+
+        function getPlay() {
+          Play = prompt("can you play this piece");
+
+          if (getPlay) {
+            console.log(getPlay + " wow thats really impressive ");
+          } else if (getPlay) {
+            console.log(
+              getPlay + " maybe you will be able to play it soon :) "
+            );
+          }
+        }
+        getPlay();
+        document.write(Composer + " " + Piece + " " + difficulty + " " + Play);
+      </script>
+    </footer>
+  </body>
+</html>
